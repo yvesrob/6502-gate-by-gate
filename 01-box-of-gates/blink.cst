@@ -1,0 +1,5 @@
+// Tang Nano 20K: the 27 MHz clock and the first LED.
+IO_LOC  "clk" 4;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_LOC  "led" 15;
+IO_PORT "led" DRIVE=8 IO_TYPE=LVCMOS18;
