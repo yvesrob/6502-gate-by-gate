@@ -1,0 +1,18 @@
+// Chapter 6: a palette. The colors of the ZX Spectrum: eight colors, then the same eight, brighter.
+// One color on each line: two hexadecimal digits for red, two for green, two for blue.
+000000    //  0: black
+0000D7    //  1: blue
+D70000    //  2: red
+D700D7    //  3: magenta
+00D700    //  4: green
+00D7D7    //  5: cyan
+D7D700    //  6: yellow
+D7D7D7    //  7: white
+000000    //  8: black
+0000FF    //  9: bright blue
+FF0000    // 10: bright red
+FF00FF    // 11: bright magenta
+00FF00    // 12: bright green
+00FFFF    // 13: bright cyan
+FFFF00    // 14: bright yellow
+FFFFFF    // 15: bright white

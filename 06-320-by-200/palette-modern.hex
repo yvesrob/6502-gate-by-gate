@@ -1,0 +1,18 @@
+// Chapter 6: a palette. A palette of our own, drawn for this book. Same numbers and same names as the Commodore 64 one.
+// One color on each line: two hexadecimal digits for red, two for green, two for blue.
+16202A    //  0: black
+F4F1E8    //  1: white
+D9483B    //  2: red
+3FB8AF    //  3: cyan
+7C5CBF    //  4: purple
+5BA84A    //  5: green
+2F6DB5    //  6: blue
+F2C94C    //  7: yellow
+E8891C    //  8: orange
+7A4B2A    //  9: brown
+F08A7B    // 10: light red
+3A4753    // 11: dark gray
+7B8794    // 12: gray
+A8D672    // 13: light green
+7DB7E8    // 14: light blue
+C5CED6    // 15: light gray
