@@ -45,7 +45,9 @@ The circuits have other names in the other chapters: the top of each Makefile li
 
 ## The videos and the book
 
-The videos show every line being written and explain it. The book, *The 6502, Gate by Gate*, goes through the same chapters for those who would rather read than pause a video.
+The videos show every line being written and explain it. They are on YouTube: https://www.youtube.com/@gatebygate
+
+The book, *The 6502, Gate by Gate*, goes through the same chapters for those who would rather read than pause a video. It is sold while it is being written, as an early access edition, and every new chapter is free for those who already have it: https://payhip.com/b/9RyvQ
 
 ## How it is written
 
