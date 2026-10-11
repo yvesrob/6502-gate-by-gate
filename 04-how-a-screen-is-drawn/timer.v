@@ -1,4 +1,4 @@
-// Chapter 4 uses the timer of chapter 3. This file is a copy of it, unchanged.
+// Chapter 4 uses the timer from chapter 3. This file is a copy of it, unchanged.
 // Chapter 3: a timer. The clock is far too fast to watch, so we count
 // its ticks, and once every PERIOD ticks we say "now".
 module timer (

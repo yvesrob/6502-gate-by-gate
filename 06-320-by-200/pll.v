@@ -1,5 +1,5 @@
-// Chapter 6 uses the pll of chapter 5. This file is a copy of it, unchanged.
-// Chapter 5: the two clocks of the picture. This is the pll of chapter 4 with
+// Chapter 6 uses the pll from chapter 5. This file is a copy of it, unchanged.
+// Chapter 5: the two clocks of the picture. This is the pll from chapter 4 with
 // two more outputs: the fast clock, which chapter 4 kept to itself, and locked.
 module pll (
     input  wire clk,            // the board's 27 MHz clock

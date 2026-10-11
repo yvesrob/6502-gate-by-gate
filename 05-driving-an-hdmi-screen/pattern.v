@@ -1,4 +1,4 @@
-// Chapter 5 uses the pattern of chapter 4. This file is a copy of it, unchanged.
+// Chapter 5 uses the pattern from chapter 4. This file is a copy of it, unchanged.
 // Chapter 4: the test pattern. It gives a color to every position of the raster.
 // It lays the picture out the way our computer will: a window of 640 x 400 with
 // a border above and below it and, inside the window, eight color bars, then

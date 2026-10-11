@@ -1,4 +1,4 @@
-// Chapter 6: the display. It takes the place of the test pattern of chapter 4.
+// Chapter 6: the display. It takes the place of the test pattern from chapter 4.
 // The color of each place now comes from two memories. One holds the picture:
 // 320 x 200 pixels, one bit for each pixel. The other holds two colors for
 // each cell of 8 x 8 pixels: one for the bits at 1, one for the bits at 0.

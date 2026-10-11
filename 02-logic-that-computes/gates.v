@@ -1,4 +1,4 @@
-// Chapter 2: the six gates of chapter 1, on their own.
+// Chapter 2: the six gates from chapter 1, on their own.
 // No buttons and no LEDs here: two inputs, and one output per gate.
 module gates (
     input  wire a,

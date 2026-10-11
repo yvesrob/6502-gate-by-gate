@@ -1,4 +1,4 @@
-// Chapter 6 uses the raster of chapter 4. This file is a copy of it, unchanged.
+// Chapter 6 uses the raster from chapter 4. This file is a copy of it, unchanged.
 // Chapter 4: the raster. Two counters that sweep the picture, left to right
 // and top to bottom, sixty times a second: 640 x 480 pixels at 60 Hz.
 module raster (

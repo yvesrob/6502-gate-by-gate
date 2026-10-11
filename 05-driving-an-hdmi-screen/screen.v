@@ -1,4 +1,4 @@
-// Chapter 5, on the board: the test pattern of chapter 4, on a real monitor.
+// Chapter 5, on the board: the test pattern from chapter 4, on a real monitor.
 module top (
     input  wire       clk,          // the board's 27 MHz clock
     output wire       tmds_clk_p,   // the four pairs of wires of the HDMI socket:
@@ -18,7 +18,7 @@ module top (
         .locked    (locked)
     );
 
-    // The picture of chapter 4: where we are, and which color goes there.
+    // The picture from chapter 4: where we are, and which color goes there.
     wire [9:0] x;
     wire [9:0] y;
     wire       hsync;

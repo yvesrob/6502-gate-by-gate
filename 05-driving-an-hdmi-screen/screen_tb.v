@@ -124,7 +124,7 @@ module screen_tb;
     reg [7:0] green_before;
     reg [7:0] blue_before;
 
-    // The picture file, written as in frame_tb.v of chapter 4.
+    // The picture file, written as in frame_tb.v from chapter 4.
     integer file;
 
     task write_byte;

@@ -1,4 +1,4 @@
-// Chapter 6 uses the tmds of chapter 5. This file is a copy of it, unchanged.
+// Chapter 6 uses the tmds from chapter 5. This file is a copy of it, unchanged.
 // Chapter 5: the TMDS encoder. It turns one byte into the ten bits that
 // travel down one pair of wires of the HDMI cable.
 module tmds (

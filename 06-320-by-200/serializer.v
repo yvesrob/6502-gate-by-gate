@@ -1,4 +1,4 @@
-// Chapter 6 uses the serializer of chapter 5. This file is a copy of it, unchanged.
+// Chapter 6 uses the serializer from chapter 5. This file is a copy of it, unchanged.
 // Chapter 5: the serializer. It takes the ten bits of a code, all at once,
 // and sends them out one after the other on a single wire, bit 0 first.
 module serializer (
