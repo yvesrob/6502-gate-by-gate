@@ -16,14 +16,19 @@ The code grows one chapter at a time. Each folder holds the code as it stands at
 | `04-how-a-screen-is-drawn` | 4. How a Screen Is Drawn | A test pattern computed in the simulator and written to a picture file |
 | `05-driving-an-hdmi-screen` | 5. Driving an HDMI Screen | The same test pattern on a real monitor |
 | `06-320-by-200` | 6. 320 by 200 | A picture of 320 by 200 pixels in sixteen colors on that monitor |
+| `07-what-a-processor-really-does` | 7. What a Processor Really Does | A first program of eleven bytes, assembled by hand and then by an assembler, which gives the same bytes |
+| `08-memory-the-bus-and-the-first-fetch` | 8. Memory, the Bus and the First Fetch | A ROM, a RAM, a bus and the first piece of the processor: it fetches the eleven bytes one by one, in the simulator |
+| `09-the-alu` | 9. The ALU | The part that computes: thirteen operations and four flags, checked in the simulator |
+| `10-first-instructions` | 10. First Instructions | Our processor runs its first program: five instructions, and the six LEDs of the board count |
 
-The processor comes next, from chapter 7 on.
+The processor knows five opcodes out of 151 so far. The rest comes next, from chapter 11 on.
 
 ## What you need
 
 - A Sipeed Tang Nano 20K and a USB-C cable. From chapter 5 on, an HDMI monitor and its cable.
 - The OSS CAD Suite. It is free and it holds every tool used here: Yosys, nextpnr, `gowin_pack`, openFPGALoader and Icarus Verilog. It exists for macOS, Linux and Windows: https://github.com/YosysHQ/oss-cad-suite-build/releases/latest
-- `make`, and Python 3 for chapter 6.
+- From chapter 7 on, cc65. It is free too, and it holds the assembler `ca65`, the linker `ld65` and the disassembler `da65`: https://cc65.github.io/getting-started.html
+- `make`, and Python 3 from chapter 6 on.
 
 Take a recent build of the suite. Chapter 6 keeps its picture in the block memory of the chip, and with a build from April 2026 that picture came out wrong on my monitor. With the build of October 7, 2026 it is right.
 
