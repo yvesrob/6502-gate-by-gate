@@ -1,0 +1,34 @@
+Chapter 7: the first program, assembled by hand.
+
+The program starts at $C000, the first byte of the ROM.
+An address of two bytes is written low byte first: $8000 becomes 00 80.
+
+  address   bytes       instruction     how the bytes were found
+  -------   ---------   -------------   ----------------------------------------------
+  $C000     A9 00       LDA #0          LDA with the value itself (immediate) is $A9,
+                                        then the value
+  $C002     8D 00 80    STA $8000       STA with a full address (absolute) is $8D,
+                                        then the address, low byte first
+  $C005     18          CLC             CLC is $18, and nothing follows
+  $C006     69 01       ADC #1          ADC with the value itself (immediate) is $69,
+                                        then the value
+  $C008     4C 02 C0    JMP $C002       JMP with a full address (absolute) is $4C,
+                                        then the address of the STA, low byte first
+
+Eleven bytes, from $C000 to $C00A:
+
+  A9 00 8D 00 80 18 69 01 4C 02 C0
+
+The five opcodes are read in the table of the 6502's instructions. In the table
+"6510 Instructions by Addressing Modes" of the document "64doc" (John West and
+Marko Makela, 1994), the column gives the first part of the opcode and the row
+the second:
+
+  LDA immediate   column a0, row +09   $A9
+  STA absolute    column 80, row +0d   $8D
+  CLC             column 00, row +18   $18
+  ADC immediate   column 60, row +09   $69
+  JMP absolute    column 40, row +0c   $4C
+
+The file count-by-hand.hex holds the same eleven bytes, one on each line.
+"make check" compares them with what the assembler ca65 produces.
