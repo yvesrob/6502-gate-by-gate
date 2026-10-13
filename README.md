@@ -1,4 +1,4 @@
-# The 6502, Gate by Gate
+# Our Own 6502, Gate by Gate
 
 This is the code of Gate by Gate, a video series and a book in which we write a 6502 computer from scratch, in Verilog, for one small FPGA board: the Sipeed Tang Nano 20K.
 
@@ -52,7 +52,7 @@ The circuits have other names in the other chapters: the top of each Makefile li
 
 The videos show every line being written and explain it. The page of the series is https://yvesrobert.com/6502 and the videos are on YouTube: https://www.youtube.com/@yvesrob
 
-The book, *The 6502, Gate by Gate*, goes through the same chapters for those who would rather read than pause a video. It is sold while it is being written, as an early access edition, and every new chapter is free for those who already have it: https://payhip.com/b/9RyvQ
+The book, *Our Own 6502, Gate by Gate*, goes through the same chapters for those who would rather read than pause a video. It is sold while it is being written, as an early access edition, and every new chapter is free for those who already have it: https://payhip.com/b/9RyvQ
 
 ## How it is written
 
