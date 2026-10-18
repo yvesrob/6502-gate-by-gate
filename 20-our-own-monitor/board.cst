@@ -1,0 +1,44 @@
+// Tang Nano 20K: the 27 MHz clock, buttons S1 and S2, the serial link, the six
+// LEDs, and the four pairs of the HDMI socket. The board.cst from chapter 17,
+// with the two pins of the serial link. Pin 70 comes from the BL616, the chip
+// by the USB-C socket, and rests at 1 (PULL_MODE=UP, in case nothing drives
+// it); pin 69 goes to it. Sipeed's own example for this board, uart, uses the
+// same two pins.
+IO_LOC  "clk" 4;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_LOC  "btn1" 88;
+IO_PORT "btn1" IO_TYPE=LVCMOS33;
+IO_LOC  "btn2" 87;
+IO_PORT "btn2" IO_TYPE=LVCMOS33;
+IO_LOC  "uart_rx" 70;
+IO_PORT "uart_rx" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_LOC  "uart_tx" 69;
+IO_PORT "uart_tx" IO_TYPE=LVCMOS33;
+IO_LOC  "led[0]" 15;
+IO_PORT "led[0]" DRIVE=8 IO_TYPE=LVCMOS18;
+IO_LOC  "led[1]" 16;
+IO_PORT "led[1]" DRIVE=8 IO_TYPE=LVCMOS18;
+IO_LOC  "led[2]" 17;
+IO_PORT "led[2]" DRIVE=8 IO_TYPE=LVCMOS18;
+IO_LOC  "led[3]" 18;
+IO_PORT "led[3]" DRIVE=8 IO_TYPE=LVCMOS18;
+IO_LOC  "led[4]" 19;
+IO_PORT "led[4]" DRIVE=8 IO_TYPE=LVCMOS18;
+IO_LOC  "led[5]" 20;
+IO_PORT "led[5]" DRIVE=8 IO_TYPE=LVCMOS18;
+IO_LOC  "tmds_clk_p" 33;
+IO_PORT "tmds_clk_p" IO_TYPE=LVDS25 PULL_MODE=NONE;
+IO_LOC  "tmds_clk_n" 34;
+IO_PORT "tmds_clk_n" IO_TYPE=LVDS25 PULL_MODE=NONE;
+IO_LOC  "tmds_d_p[0]" 35;
+IO_PORT "tmds_d_p[0]" IO_TYPE=LVDS25 PULL_MODE=NONE;
+IO_LOC  "tmds_d_n[0]" 36;
+IO_PORT "tmds_d_n[0]" IO_TYPE=LVDS25 PULL_MODE=NONE;
+IO_LOC  "tmds_d_p[1]" 37;
+IO_PORT "tmds_d_p[1]" IO_TYPE=LVDS25 PULL_MODE=NONE;
+IO_LOC  "tmds_d_n[1]" 38;
+IO_PORT "tmds_d_n[1]" IO_TYPE=LVDS25 PULL_MODE=NONE;
+IO_LOC  "tmds_d_p[2]" 39;
+IO_PORT "tmds_d_p[2]" IO_TYPE=LVDS25 PULL_MODE=NONE;
+IO_LOC  "tmds_d_n[2]" 40;
+IO_PORT "tmds_d_n[2]" IO_TYPE=LVDS25 PULL_MODE=NONE;
