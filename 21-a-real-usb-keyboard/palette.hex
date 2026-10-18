@@ -1,0 +1,18 @@
+// Chapter 6: a palette. The sixteen colors of the Commodore 64, in the values known as "Pepto".
+// One color on each line: two hexadecimal digits for red, two for green, two for blue.
+000000    //  0: black
+FFFFFF    //  1: white
+68372B    //  2: red
+70A4B2    //  3: cyan
+6F3D86    //  4: purple
+588D43    //  5: green
+352879    //  6: blue
+B8C76F    //  7: yellow
+6F4F25    //  8: orange
+433900    //  9: brown
+9A6759    // 10: light red
+444444    // 11: dark gray
+6C6C6C    // 12: gray
+9AD284    // 13: light green
+6C5EB5    // 14: light blue
+959595    // 15: light gray

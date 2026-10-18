@@ -1,0 +1,11 @@
+# Chapter 18: what da65 needs to know to disassemble the ROM. It begins at
+# $C000, with the font: 760 bytes of pictures of letters, not instructions.
+GLOBAL {
+    STARTADDR       $C000;
+};
+RANGE {
+    START           $C000;
+    END             $C2F7;
+    TYPE            ByteTable;
+    NAME            "FONT";
+};
