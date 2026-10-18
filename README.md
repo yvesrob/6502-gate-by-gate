@@ -2,7 +2,7 @@
 
 This is the code of Gate by Gate, a video series and a book in which we write a 6502 computer from scratch, in Verilog, for one small FPGA board: the Sipeed Tang Nano 20K.
 
-We start with a single gate and a blinking LED. The goal is a computer that shows its picture on an HDMI screen, reads a USB keyboard and runs BASIC. The processor is our own, written line by line.
+We start with a single gate and a blinking LED. By chapter 23, the computer shows its picture on an HDMI screen, reads a USB keyboard and runs the BASIC that Microsoft wrote for the 6502. The processor is our own, written line by line.
 
 The code grows one chapter at a time. Each folder holds the code as it stands at the end of its chapter, with its test benches and its Makefile. Each folder also stands on its own: when a chapter needs a file from an earlier one, it keeps its own copy.
 
@@ -20,8 +20,21 @@ The code grows one chapter at a time. Each folder holds the code as it stands at
 | `08-memory-the-bus-and-the-first-fetch` | 8. Memory, the Bus and the First Fetch | A ROM, a RAM, a bus and the first piece of the processor: it fetches the eleven bytes one by one, in the simulator |
 | `09-the-alu` | 9. The ALU | The part that computes: thirteen operations and four flags, checked in the simulator |
 | `10-first-instructions` | 10. First Instructions | Our processor runs its first program: five instructions, and the six LEDs of the board count |
+| `11-addressing-modes` | 11. Addressing Modes | A light two LEDs wide sweeps across the board, read from a table |
+| `12-arithmetic-compares-and-decimal-mode` | 12. Arithmetic, Compares and Decimal Mode | A stopwatch that counts the seconds in decimal on the six LEDs |
+| `13-branches-and-loops` | 13. Branches and Loops | A loop that computes the Collatz sequence on the six LEDs and stops by itself on 1 |
+| `14-the-stack-and-subroutines` | 14. The Stack and Subroutines | A subroutine that calls itself makes a bar of light grow and shrink on the six LEDs |
+| `15-reset-and-interrupts` | 15. Reset and Interrupts | A light walks along the six LEDs; button S2 interrupts it, and it goes on from where it was |
+| `16-is-it-really-a-6502` | 16. Is It Really a 6502? | The functional test of Klaus Dormann runs again and again on the board, at full speed, and the six LEDs count the runs that went well |
+| `17-the-processor-draws` | 17. The Processor Draws | The processor draws 128 straight lines on the screen, then changes the colors of the whole picture |
+| `18-letters-made-of-pixels` | 18. Letters Made of Pixels | Text on the screen: a few lines, the 95 characters of our font and 48 lines of slanting stripes |
+| `19-talking-to-your-computer` | 19. Talking to Your Computer | A program sent from your computer through the USB-C cable draws mazes on the screen |
+| `20-our-own-monitor` | 20. Our Own Monitor | A monitor in the ROM: from your computer, you look at the memory, change it and run a program |
+| `21-a-real-usb-keyboard` | 21. A Real USB Keyboard | The reports of a real USB keyboard, read through a CH9350 module, on the screen and on your computer |
+| `22-from-key-codes-to-characters` | 22. From Key Codes to Characters | The monitor at the keyboard: characters, Shift and AltGr, keys that repeat, Backspace and a blinking cursor |
+| `23-running-the-basic-bill-gates-wrote` | 23. Running the BASIC Bill Gates Wrote | Microsoft's BASIC for the 6502 runs on our computer, started from the monitor with `D000R` |
 
-The processor knows five opcodes out of 151 so far. The rest comes next, from chapter 11 on.
+From chapter 15 on, the processor knows all 151 opcodes of the 6502, and in chapter 16 it passes the functional test of Klaus Dormann. These 23 chapters are volume 1 of the series. Volume 2, where we write a BASIC of our own, comes next.
 
 ## What you need
 
@@ -29,8 +42,11 @@ The processor knows five opcodes out of 151 so far. The rest comes next, from ch
 - The OSS CAD Suite. It is free and it holds every tool used here: Yosys, nextpnr, `gowin_pack`, openFPGALoader and Icarus Verilog. It exists for macOS, Linux and Windows: https://github.com/YosysHQ/oss-cad-suite-build/releases/latest
 - From chapter 7 on, cc65. It is free too, and it holds the assembler `ca65`, the linker `ld65` and the disassembler `da65`: https://cc65.github.io/getting-started.html
 - `make`, and Python 3 from chapter 6 on.
+- From chapter 21 on, a USB keyboard and the KAmod USB HID Extender from Kamami, a small module with a CH9350 chip, with six header pins, three Dupont wires, a soldering iron and a multimeter.
 
 Take a recent build of the suite. Chapter 6 keeps its picture in the block memory of the chip, and with a build from April 2026 that picture came out wrong on my monitor. With the build of October 7, 2026 it is right.
+
+Chapters 16 and 23 use code that is not ours, and that is not in this repository: the functional test of Klaus Dormann, and Microsoft's BASIC for the 6502 as mist64/msbasic rebuilds it. Their Makefile fetches it the first time, so these two chapters need an internet connection once. The README of chapter 23 says where its BASIC comes from and under which licenses.
 
 ## How to use it
 
@@ -52,7 +68,7 @@ The circuits have other names in the other chapters: the top of each Makefile li
 
 The videos show every line being written and explain it. The page of the series is https://yvesrobert.com/6502 and the videos are on YouTube: https://www.youtube.com/@yvesrob
 
-The book, *Our Own 6502, Gate by Gate*, goes through the same chapters for those who would rather read than pause a video. It is sold while it is being written, as an early access edition, and every new chapter is free for those who already have it: https://payhip.com/b/9RyvQ
+The book, *Our Own 6502, Gate by Gate*, goes through the same chapters for those who would rather read than pause a video. Its first volume is complete, and those who have it get every new version at no extra cost: https://payhip.com/b/9RyvQ
 
 ## How it is written
 
