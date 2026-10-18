@@ -1,0 +1,15 @@
+d000r
+
+
+10 for i=1^?0 to 6.2 step .4
+20 print tab(19+18*sin(i));"*"
+30 next i
+run^W
+^?^?new
+10 print mid$("/\",rnd(1)*2+1,1);
+20 goto 10
+run
+[S2]
+list
+poke 32768,63
+print "abcdefghijklmnopqrstuvwxyz012345x^?6"
