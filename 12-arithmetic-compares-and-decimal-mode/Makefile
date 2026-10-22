@@ -81,6 +81,12 @@ test-modes: $(BUILD)/modes.hex
 test-arithmetic: $(BUILD)/arithmetic.hex
 test-ports: $(BUILD)/ports.hex
 
+# modes.s tests a flaw of the 6502 on purpose, with JMP ($03FF). Recent
+# versions of ca65 refuse that jump unless we relax their checks.
+$(BUILD)/modes.o: modes.s
+	mkdir -p $(BUILD)
+	ca65 --relax-checks -l $(BUILD)/modes.lst -o $@ $<
+
 $(BUILD)/modes.hex: $(BUILD)/modes.bin
 	python3 tools/hex.py $< $@
 

@@ -76,8 +76,8 @@ start:  ldx #$40            ; X = 40
         ldx LEDS            ; X = 2D
         ldy NOTHING         ; Y = 00
 
-; JMP (address): the target is kept in memory, low byte first. Both bytes
-; are read on the same page: JMP ($03FF) takes the high byte at $0300.
+; JMP (address): the target is kept in memory, low byte first. The 6502 has a
+; flaw, fixed in the 65C02: JMP ($03FF) takes the high byte at $0300, not $0400.
         lda #<done
         sta $03FF
         lda #>done
