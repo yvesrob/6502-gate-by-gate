@@ -16,7 +16,8 @@ FAMILY  = GW2A-18C
 FREQ    = 27
 
 # The building blocks of this chapter. Test benches and circuits pick what they need.
-BLOCKS  = raster.v memory.v palette.v display.v tmds.v serializer.v pll.v
+# wildcard keeps only the files that are already there, so you can build as you follow along.
+BLOCKS  = $(wildcard raster.v memory.v palette.v display.v tmds.v serializer.v pll.v)
 # The three files that fill the memories: the picture, its colors, the palette.
 MEMORY  = bitmap.hex colors.hex palette.hex
 

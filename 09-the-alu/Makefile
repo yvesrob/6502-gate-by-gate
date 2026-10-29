@@ -8,7 +8,8 @@
 BUILD ?= build
 
 # The building blocks of this chapter. Test benches pick what they need.
-BLOCKS = timer.v rom.v ram.v alu.v cpu.v computer.v
+# wildcard keeps only the files that are already there, so you can build as you follow along.
+BLOCKS = $(wildcard timer.v rom.v ram.v alu.v cpu.v computer.v)
 # The names of the ALU's operations. alu.v and its test bench include this
 # file: it is not given to the compiler as a file of its own.
 NAMES  = alu_operations.vh

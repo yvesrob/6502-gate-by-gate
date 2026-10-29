@@ -17,7 +17,8 @@ FAMILY  = GW2A-18C
 FREQ    = 25.2
 
 # The building blocks of the computer. Test benches and circuits pick what they need.
-BLOCKS  = timer.v rom.v ram.v picture_ram.v alu.v cpu.v computer.v
+# wildcard keeps only the files that are already there, so you can build as you follow along.
+BLOCKS  = $(wildcard timer.v rom.v ram.v picture_ram.v alu.v cpu.v computer.v)
 # The building blocks of the picture, from chapters 4 to 6.
 PICTURE = raster.v display.v palette.v
 # The names of the ALU's operations. alu.v, cpu.v and the test bench of the

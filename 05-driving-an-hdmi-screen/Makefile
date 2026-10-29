@@ -12,7 +12,8 @@ FAMILY  = GW2A-18C
 FREQ    = 27
 
 # The building blocks of this chapter. Test benches and circuits pick what they need.
-BLOCKS  = raster.v pattern.v tmds.v serializer.v pll.v
+# wildcard keeps only the files that are already there, so you can build as you follow along.
+BLOCKS  = $(wildcard raster.v pattern.v tmds.v serializer.v pll.v)
 
 test: test-tmds test-screen
 

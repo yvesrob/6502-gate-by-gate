@@ -9,7 +9,8 @@
 BUILD ?= build
 
 # The building blocks of this chapter. Test benches pick what they need.
-BLOCKS = timer.v rom.v ram.v cpu.v computer.v
+# wildcard keeps only the files that are already there, so you can build as you follow along.
+BLOCKS = $(wildcard timer.v rom.v ram.v cpu.v computer.v)
 
 test: test-rom test-ram test-computer
 

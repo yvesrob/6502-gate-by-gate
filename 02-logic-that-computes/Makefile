@@ -11,7 +11,8 @@ FAMILY  = GW2A-18C
 FREQ    = 27
 
 # The building blocks of this chapter. Test benches and circuits pick what they need.
-BLOCKS  = gates.v half_adder.v full_adder.v adder8.v
+# wildcard keeps only the files that are already there, so you can build as you follow along.
+BLOCKS  = $(wildcard gates.v half_adder.v full_adder.v adder8.v)
 
 test: test-gates test-half_adder test-full_adder test-adder8
 
