@@ -1,0 +1,15 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+	"name": "6502 gate by gate",
+	// More info: https://containers.dev/guide/dockerfile
+	"dockerFile": "Dockerfile",
+
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"extensions": [
+				"mshr-h.VerilogHDL"
+			]
+		}
+	}
+}
