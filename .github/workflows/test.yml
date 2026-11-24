@@ -10,6 +10,10 @@ jobs:
       image: davidsiaw/yosys-docker:latest
 
     steps:
+      - name: Install cc65
+        run: |
+          apt install cc65
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
