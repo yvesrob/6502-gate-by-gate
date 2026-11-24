@@ -1,0 +1,19 @@
+name: Run Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      # TODO(siggi): Can this use the Dockerfile in .devcontainer?
+      image: davidsiaw/yosys-docker:latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run tests
+        run: |
+          cd 02-logic-that-computes
+          make test
