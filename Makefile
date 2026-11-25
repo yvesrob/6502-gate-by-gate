@@ -32,4 +32,4 @@ test: $(addprefix test-,$(TESTED_CHAPTERS))
 
 # Recurse into a chapter and run the tests.
 test-%:
-	make -C $* test
+	$(MAKE) -C $* test

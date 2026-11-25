@@ -1,4 +1,4 @@
-FROM davidsiaw/yosys-docker
+FROM davidsiaw/yosys-docker:20261124
 
 ARG USERNAME=vscode
 ARG USER_UID=1000
