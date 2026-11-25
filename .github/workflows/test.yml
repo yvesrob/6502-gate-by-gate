@@ -19,4 +19,4 @@ jobs:
 
       - name: Run tests
         run: |
-          make test
+          make -j$(nproc) test

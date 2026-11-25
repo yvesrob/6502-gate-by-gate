@@ -1,12 +1,14 @@
+# This makefile runs the tests in each chapter that
+# has a test target.
 
-SUBDIRS := \
-	01-box-of-gates \
+# Chapters 1 and 7 have no tests and are not included
+# in this list.
+TESTED_CHAPTERS := \
 	02-logic-that-computes \
 	03-logic-that-remembers \
 	04-how-a-screen-is-drawn \
 	05-driving-an-hdmi-screen \
 	06-320-by-200 \
-	07-what-a-processor-really-does \
 	08-memory-the-bus-and-the-first-fetch \
 	09-the-alu \
 	10-first-instructions \
@@ -24,17 +26,8 @@ SUBDIRS := \
 	22-from-key-codes-to-characters \
 	23-running-the-basic-bill-gates-wrote
 
-all: $(SUBDIRS)
+test: $(addprefix test-,$(TESTED_CHAPTERS))
 
-$(SUBDIRS):
-	$(MAKE) -C $@
-
-clean:
-	for dir in $(SUBDIRS); do \
-		$(MAKE) -C $$dir clean; \
-	done
-
-test:
-	for dir in $(SUBDIRS); do \
-		$(MAKE) -C $$dir test; \
-	done
+# Recurse into a chapter and run the tests.
+test-%:
+	make -C $* test
