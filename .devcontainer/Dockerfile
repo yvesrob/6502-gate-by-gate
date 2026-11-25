@@ -1,5 +1,7 @@
 FROM ubuntu:26.04
 
+# TODO(siggi): base this container on davidsiaw/yosys-docker and
+#   use devcontainer.json to specify user name.
 ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
