@@ -4,6 +4,9 @@
 	// More info: https://containers.dev/guide/dockerfile
 	"dockerFile": "Dockerfile",
 
+	// Run as the vscode user.
+	"containerUser": "vscode",
+
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {

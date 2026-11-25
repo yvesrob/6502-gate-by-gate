@@ -1,0 +1,19 @@
+name: Run Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: davidsiaw/yosys-docker:20261124
+
+    steps:
+      - name: Install cc65
+        run: apt install cc65
+
+      - name: Checkout repository
+        uses: actions/checkout@v7.0.1
+
+      - name: Run tests
+        run: make -j$(nproc) test
