@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Check nproc
-        run: nproc
+        run: echo -j$(nproc)
 #
 #      - name: Run tests
 #        run: |
